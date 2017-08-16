@@ -1,24 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import calendarApp from './reducers'
+import App from './components/App'
 
-const Calendar = props => (
-  <div className="calendar-app">
-     {props.name}!
-  </div>
-)
-
-Calendar.defaultProps = {
-  name: 'OnePay'
-}
-
-Calendar.propTypes = {
-  name: PropTypes.string
-}
+let store = createStore(calendarApp)
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Calendar name="OnePay Calendar" />,
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
     document.body.appendChild(document.createElement('div')),
   )
 })
