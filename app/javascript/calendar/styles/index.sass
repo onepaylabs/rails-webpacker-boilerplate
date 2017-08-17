@@ -1,9 +1,7 @@
-.calendarApp
-  flex: 1
-
 .container
- display: flex
- flex: 1
+  display: block
+  height: 100%
+  background-color: #f9f9f9
 
 .content
   flex: 1
@@ -39,14 +37,19 @@
   .issued-amount
 
 .statusContainer
+  display: flex
   flex: 1
-  flex-direction: column
-  justify-content: space-around
-  width: 100%
-  padding: 4px 0
-  .statusItem
-    flex: 1
-    text-align: center
+  flex-direction: row
+
+.statusItem
+  flex: 1
+  text-align: center
+
 .progressContainer
+  background-color: white
+
 .overviewContainer
+  background-color: white
+
 .infoContainer
+  background-color: white
