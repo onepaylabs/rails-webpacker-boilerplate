@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import calendarApp from './reducers'
 import App from './components/App'
+import styles from './styles'
 
 let store = createStore(calendarApp)
 
